@@ -1,15 +1,18 @@
-const rectangle = require('./rectangle'); //works the same as imoprt in react
+const rect = require('./rectangle'); //works the same as imoprt in react
 
 function solveRect(l, w) {
     console.log(`Solving for rectangle with dimentions: ${l}, ${w}`);
 
-    if (l <= 0 || w <= 0) {
-        console.log(`Rectangle dimentions must be larger than zero. Received: ${l}, ${w}`);
-    } else {
-        console.log(`Area of rectangle: ${rectangle.area(l, w)}`);
-        console.log(`Perimeter of rectangle: ${rectangle.perimeter(l, w)}`);
+    rect(l, w, (err, rectangle) => {
 
-    }
+        if (err) {
+            console.log('Error:', err.message);
+        } else {
+            console.log(`Area of rectangle with dimentions ${l}, ${w}: ${rectangle.area()}`); //removing l, and w from pramater list since it is passed through it from outter functiuon
+            console.log(`Perimeter of rectangle with dimentions ${l}, ${w}: ${rectangle.perimeter()}`);
+        }
+    });
+    console.log('This statement is logged after the call to react()');
 }
 
 solveRect(2, 4);
