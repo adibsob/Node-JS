@@ -1,7 +1,4 @@
-const rectangle = {
-    perimeter: (x, y) => 2 * (x + y),
-    area: (x, y) => x * y
-};
+const rectangle = require('./rectangle'); //works the same as imoprt in react
 
 function solveRect(l, w) {
     console.log(`Solving for rectangle with dimentions: ${l}, ${w}`);
