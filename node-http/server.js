@@ -9,7 +9,7 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
     console.log(`Request for ${req.url} by method ${req.method}`);
 
-    if (req.method === 'Get') {
+    if (req.method === 'GET') {
         let fileUrl = req.url;
         if (fileUrl === '/') {
             fileUrl = '/index.html';
