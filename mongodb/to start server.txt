@@ -1,0 +1,2 @@
+To start mongodb server run following command in a seperate terminal: 
+mongod --dbpath=data
