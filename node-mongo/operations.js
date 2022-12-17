@@ -17,3 +17,4 @@ exports.updateDocument = (db, document, update, collection) => {
     const coll = db.collection(collection);
     return coll.updateOne(document, { $set: update }, null);
 };
+//
