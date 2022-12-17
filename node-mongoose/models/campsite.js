@@ -5,7 +5,7 @@ const campsiteSchema = new Schema({
     name: {
         type: String,
         required: true,
-        unique: TextTrackCue,
+        unique: true
     },
     description: {
         type: String,
@@ -15,6 +15,6 @@ const campsiteSchema = new Schema({
     timestamps: true
 });
 
-const Campsite = mongoose.modelNames('Campsite', campsiteSchema);
+const Campsite = mongoose.model('Campsite', campsiteSchema);
 
 module.exports = Campsite;
